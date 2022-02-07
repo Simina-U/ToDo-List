@@ -37,7 +37,9 @@ function saveToDoToLocalStorage(toDo) {
   } else {
     toDos = JSON.parse(localStorage.getItem("toDos"));
   }
-  toDos.push(toDo);
+  const toDoSet = new Set(toDos);
+  toDoSet.add(toDo);
+  toDos = Array.from(toDoSet);
   localStorage.setItem("toDos", JSON.stringify(toDos));
 }
 
