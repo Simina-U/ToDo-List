@@ -74,7 +74,7 @@ $toDosList.addEventListener("click", (e) => {
   }
 });
 
-$filterOption.addEventListener("click", (e) => {
+$filterOption.addEventListener("change", (e) => {
   const $toDos = document.querySelectorAll(".toDo-item");
   $toDos.forEach((toDo) => {
     console.log(e.target.value);
